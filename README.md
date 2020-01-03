@@ -9,6 +9,7 @@ Requirement
 ```
 git clone https://github.com/choco0908/arjsproject.git
 cd arjsproject
+npm install
 npm start
 ```
 
