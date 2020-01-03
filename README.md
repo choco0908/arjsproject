@@ -1,7 +1,7 @@
 # arjsproject
 If you want to use this project,
 
-Noticed
+Requirement
 1. Prepare Notebook (including webcam) or PC with webcam
 2. Installing node.js 
 
