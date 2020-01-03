@@ -14,4 +14,4 @@ npm start
 ```
 
 
-Connect http://localhost:3000 except IE
+Connect to http://localhost:3000 except IE
