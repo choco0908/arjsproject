@@ -12,3 +12,5 @@ cd arjsproject
 npm start
 ```
 
+
+Connect http://localhost:3000
