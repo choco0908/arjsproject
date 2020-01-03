@@ -1,5 +1,5 @@
 # arjsproject
-If you want to use this project,
+If you want to test this project,
 
 Requirement
 1. Prepare Notebook (including webcam) or PC with webcam
