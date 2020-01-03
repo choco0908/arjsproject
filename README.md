@@ -1,5 +1,5 @@
 # arjsproject
-If you want to test this project,
+If you want to test this project, it doesn't matter what OS it is.
 
 Requirement
 1. Prepare Notebook (including webcam) or PC with webcam
@@ -14,4 +14,4 @@ npm start
 ```
 
 
-Connect http://localhost:3000
+Connect http://localhost:3000 except IE
