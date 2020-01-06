@@ -15,3 +15,6 @@ npm start
 
 
 Connect to https://localhost or https://hostname except IE 
+
+
+Tested Mobiles : Galaxy Note 10 with Chrome Browser, iPhone 7 with Safari Browser
