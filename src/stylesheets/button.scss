@@ -1,0 +1,215 @@
+
+$bg: #1E88E5;
+$primary-button: #448AFF;
+
+html{font:normal 100%/1.5 'Roboto Slab',serif;}
+html,body{height:100%;}body{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;background:$bg;}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    color: white;
+    b {
+        font-weight: 700;
+    }
+}
+
+.mocean-modal-wrap {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+  max-width: 350px;
+    button {
+        outline: 1px solid darken($primary-button, 5%);
+        transform-origin: 50% 50%;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+button {
+    appearance: none;
+    border: none;
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+    flex: 1 1 10%;
+    padding: 0.875rem;
+    transition: 100ms all ease-in-out;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    background: $primary-button;
+    color: white;
+    &:hover {
+        cursor: pointer;
+        background: darken($primary-button, 2%);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+//------------------------------------------------------------
+// Mocean SliderModals
+// What follows is a rebirth of work from the Effeckt project.
+// RIP Effeckt Project…You were loved by many.
+// https://h5bp.github.io/Effeckt.css
+//------------------------------------------------------------
+
+// 3D & Speed
+$mocean-transition-duration: 500ms !default;
+$mocean-perspective: 600px !default;
+
+// Motion
+$mocean-modal-transition-duration: 500ms !default;
+$mocean-modal-animation-duration: $mocean-modal-transition-duration*2 !default;
+
+// Color
+$mocean-modal-bg: #0D47A1 !default;
+
+// Size
+$mocean-modal-max-width: 320px !default;
+$mocean-modal-z-index: 2000 !default;
+
+
+//------------------------------------------------------------
+// Mocean Modal Styling
+//------------------------------------------------------------
+
+.mocean-modal-wrap {
+  position: fixed;
+  max-width: $mocean-modal-max-width;
+    width: 100%;
+  z-index: $mocean-modal-z-index;
+  visibility: hidden;
+  backface-visibility: hidden;
+    width: 100%;
+    margin: auto;
+}
+
+.mocean-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: $mocean-modal-transition-duration;
+    background: $mocean-modal-bg;
+}
+
+.mocean-show.mocean-modal-wrap {
+  visibility: visible;
+  ~ .mocean-modal-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.mocean-modal {
+  transition-property: all;
+  transition-duration: $mocean-modal-transition-duration;
+  transition-timing-function: cubic-bezier(.4, 0, 0, 1.5);
+  animation-duration: $mocean-modal-animation-duration;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.4, 0, 0, 1.5);
+}
+
+
+// Effect: Slide from the top
+.slide-in-top .mocean-content {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}
+
+.mocean-show.slide-in-top .mocean-content {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+
+// Effect: Slide from the right
+.slide-in-right .mocean-content {
+  transform: translate3d(30%, 0, 0);
+  opacity: 0;
+}
+
+.mocean-show.slide-in-right .mocean-content {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+
+// Effect: Slide from the bottom
+.slide-in-bottom .mocean-content {
+  transform: translate3d(0, 30%, 0);
+  opacity: 0;
+}
+
+.mocean-show.slide-in-bottom .mocean-content {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+// Effect: Slide from the left
+.slide-in-left .mocean-content {
+  transform: translate3d(-30%, 0, 0);
+  opacity: 0;
+}
+
+.mocean-show.slide-in-left .mocean-content {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+
+// Mocean Out: Slide Out Bottom
+.slide-out-bottom .mocean-content {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+// Mocean Out: Slide Out Top
+.slide-out-top .mocean-content {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+// Mocean Out: Slide Out Right
+.slide-out-right .mocean-content {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+// Mocean Out: Slide Out Left
+.slide-out-left .mocean-content {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+
+//------------------------------------------------------------
+// Mocean Modal Utilities
+//------------------------------------------------------------
+
+.mocean-perspective {
+  perspective: $mocean-perspective;
+}
+
+.mocean-show {
+  visibility: visible;
+}

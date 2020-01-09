@@ -19,6 +19,7 @@
   "homepage": "https://github.com/choco0908/arjsproject#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "node-sass": "^4.13.0",
     "nodemon": "^2.0.2"
   }
 }
