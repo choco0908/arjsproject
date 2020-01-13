@@ -13,8 +13,8 @@ npm install
 npm start
 ```
 
+Change const hostname value in artest.js
 
-Connect to https://localhost or https://hostname except IE 
-
+Then, connect to https://localhost/artest or https://hostname/artest except IE 
 
 Tested Mobiles : Galaxy Note 10 with Chrome Browser, iPhone 7 with Safari Browser
