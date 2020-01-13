@@ -32,6 +32,18 @@ var http_server = http.createServer(options_http,app).listen(3000);
 //https server on
 var https_server = https.createServer( options_https,app ).listen(443);
 
+app.get('/', function(req, res){
+    fs.readFile('index.html',function(error,data){
+        if(error){
+            console.log(error);
+        }
+        else{
+            res.writeHead(200);
+            res.end(data);
+        }
+    })
+});
+
 app.get('/artest', function(req, res){
     fs.readFile('artest.html',function(error,data){
         if(error){
