@@ -10,13 +10,13 @@ html, body {
    }
     
    #container {
-    position: fixed;
+    position: absolute;
     width: 340px;
     height: 285px;
-    top: 15%;
-    left: 50%;
-    margin-top: -140px;
-    margin-left: -170px;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     background: #fff;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -138,4 +138,20 @@ html, body {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
     background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
     background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+   }
+
+   #camframe{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    bottom : 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+   }
+   #ariframe{
+    width: 600px;
+    height: 600px;
+    bottom : 10%;
+    visibility:hidden;
    }

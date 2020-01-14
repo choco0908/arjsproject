@@ -13,13 +13,13 @@
     <!-- Begin Page Content --> 
     <div id="container">
          
-        <form>
+        <form name="getlatlng" action="" method="GET" target="/artest" onsubmit="return openiframe()">
          
             <label for="latitude">위도(latitude):</label>
-            <input type="text" id="latitude" name="latitude" maxlength=10 value="ex) 37.5129924">
+            <input type="text" id="latitude" name="latitude" maxlength=10 placeholder="ex) 37.512992">
 
             <label for="longitude">경도(longitude):</label>
-            <input type="text" id="longitude" name="longitude" maxlength=10 value="ex) 127.1018428">
+            <input type="text" id="longitude" name="longitude" maxlength=10 placeholder="ex) 127.101842">
              
             <div id="lower">
                 <p><a href="https://www.google.com/maps/">Google Map으로 가기</a></p>
@@ -27,8 +27,29 @@
             </div><!--/ lower-->
          
         </form>
-         
+        
     </div><!--/ container-->
+    <script>
+        function openiframe(){
+            const lat = document.getElementById('latitude');
+            const lng = document.getElementById('longitude');
+
+            if(lat.value == '' || lat.value == null || lng.value == '' || lng.value == null){
+                alert('경도 위도값을 입력해주세요');
+                return false;
+            }
+            document.getlatlng.action = "/artest";
+            document.getlatlng.target = "ariframe";
+            document.getlatlng.submit();
+            document.getElementById("ariframe").style.visibility = 'visible';
+            return true;
+        }
+    </script>
+    <div id = "camframe" name="camframe">
+        <iframe id="ariframe" name="ariframe">
+        </iframe> 
+    </div>
+    
 <!-- End Page Content -->
 </body>
 </html>
