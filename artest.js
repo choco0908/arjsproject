@@ -27,10 +27,14 @@ var options_https = {
 }
 
 //http server on
-var http_server = http.createServer(options_http,app).listen(3000);
+var http_server = http.createServer(options_http,app).listen(3000,function(){
+    console.log("Express https_server has started on http://"+hostname+":3000");
+});
 
 //https server on
-var https_server = https.createServer( options_https,app ).listen(443);
+var https_server = https.createServer( options_https,app ).listen(443,function(){
+    console.log("Express https_server has started on https://"+hostname);
+});
 
 app.get('/', function(req, res){
     fs.readFile('index.html',function(error,data){
