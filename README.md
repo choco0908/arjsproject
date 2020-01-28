@@ -18,3 +18,11 @@ Change const hostname value in artest.js
 Then, connect to https://localhost/artest or https://hostname/artest except IE 
 
 Tested Mobiles : Galaxy Note 10 with Chrome Browser, iPhone 7 with Safari Browser
+
+
+# Licenses
+It is **all open source**! jsartoolkit5 is under LGPLv3 license and additional permission.
+And All my code in AR.js repository is under MIT license. :)
+
+For legal details, be sure to check [jsartoolkit5 license](https://github.com/artoolkit/jsartoolkit5/blob/master/LICENSE.txt)
+and [AR.js license](https://github.com/jeromeetienne/AR.js/blob/master/LICENSE.txt).
