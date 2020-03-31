@@ -4,9 +4,9 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>GeoAR Camera Frame</title>
-    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
-    <script src='https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js'></script>
-    <script src='https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js'></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script>
         // Place Object 저장 배열 생성
         const loadPlaces = function () {
@@ -35,8 +35,10 @@
 
                         const icon = document.createElement('a-image');
                         icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                        icon.setAttribute('look-at','[gps-camera]')
                         icon.setAttribute('src', '/img/map-marker.png');                        
-                        icon.setAttribute('scale', '10, 10');
+                        icon.setAttribute('scale', '10, 10 10');
+                        icon.setAttribute('object-loc-control');
                         scene.appendChild(icon);
                       });
                   })
@@ -82,7 +84,7 @@
         embedded
         arjs='sourceType: webcam; sourceWidth:1080; sourceHeight:764; displayWidth: 1080; displayHeight: 764; debugUIEnabled: false;'>
         <a-camera
-            gps-camera="minDistance: 1;" rotation-reader look-controls position="0 1.6 0">
+            gps-camera rotation-reader look-controls position="0 1.6 0">
         </a-camera>
     </a-scene>
 </body>
