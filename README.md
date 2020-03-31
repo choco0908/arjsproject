@@ -37,13 +37,13 @@ Organizational Unit Name (eg, section) []:ARTest
 Common Name (eg, fully qualified host name) []:ARTest
 Email Address []:ARTest@gmail.com
 
-git clone https://github.com/choco0908/arjsproject.git
-cd arjsproject
-npm install
+$ git clone https://github.com/choco0908/arjsproject.git
+$ cd arjsproject
+$ npm install
 
-mv ../*.pem serverpem
+$ mv ../*.pem serverpem
 
-npm start
+$ npm start
 ```
 
 Change const hostname value in artest.js
